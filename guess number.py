@@ -3,15 +3,23 @@
 # 猜對的話 印出 "終於猜對了!"
 # 猜錯的話 要告訴他 比答案大/小
 
+#延伸功能 一邊猜一邊告知猜了第幾次?
+
 import random
 r = random.randint(1,100)
+c = 0
 while True :
 	user_input = input('Guess a number')
+	c += 1 #c = c + 1
 	user_input = int(user_input)
 	if user_input == r :
+		print('猜了第', c ,'次')
 		print('終於猜對了!')
 		break
 	elif user_input < r :
+		#print('猜了第', c ,'次')
 		print('答案比較大')
 	elif user_input > r :
+		#print('猜了第', c ,'次') 
 		print('答案比較小')
+	print('這是你猜的第', c ,'次') 
